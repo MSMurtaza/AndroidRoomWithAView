@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 class WordRepository {
-    private WordDao mWordDao;
-    private LiveData<List<Word>> mAllWords;
+    private final WordDao mWordDao;
+    private final LiveData<List<Word>> mAllWords;
 
     WordRepository(Application application) {
         WordRoomDatabase wordRoomDatabase

@@ -35,7 +35,7 @@ abstract class WordRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    private static WordRoomDatabase.Callback sRoomDatabaseCallback = new WordRoomDatabase.Callback() {
+    private static final WordRoomDatabase.Callback sRoomDatabaseCallback = new WordRoomDatabase.Callback() {
         @Override
         public void onOpen(@NonNull SupportSQLiteDatabase db) {
             super.onOpen(db);
@@ -45,8 +45,8 @@ abstract class WordRoomDatabase extends RoomDatabase {
 
                 Word word = new Word("Hello");
                 wordDao.insert(word);
-                Word word1 = new Word("World");
-                wordDao.insert(word1);
+                word = new Word("World");
+                wordDao.insert(word);
             });
         }
     };

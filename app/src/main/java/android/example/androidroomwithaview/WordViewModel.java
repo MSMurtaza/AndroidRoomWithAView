@@ -9,8 +9,8 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 public class WordViewModel extends AndroidViewModel {
-    private WordRepository mWordRepository;
-    private LiveData<List<Word>> mAllWords;
+    private final WordRepository mWordRepository;
+    private final LiveData<List<Word>> mAllWords;
 
     public WordViewModel(@NonNull Application application) {
         super(application);

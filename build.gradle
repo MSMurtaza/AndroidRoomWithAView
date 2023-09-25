@@ -8,7 +8,7 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath 'com.android.tools.build:gradle:8.1.1'
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -24,13 +24,13 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
 
 ext {
-    roomVersion = '2.2.1'
-    archLifecycleVersion = '2.2.0'
-    coreTestingVersion = '2.1.0'
-    materialVersion = '1.0.0'
+    roomVersion = '2.5.2'
+    archLifecycleVersion = '2.2.0'  //2.2.0
+    coreTestingVersion = '2.2.0'
+    materialVersion = '1.9.0'
 }
